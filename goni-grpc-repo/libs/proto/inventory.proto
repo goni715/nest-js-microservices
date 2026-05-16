@@ -1,9 +1,9 @@
-syntax = "proto3"
+syntax = "proto3";
 
-package inventory
+package inventory;
 
-service InventoryService {
-    rpc CheckStock (StockRequest) returns (StockResponse);
+message StockRequest {
+    string productId = 1;
 }
 
 message StockResponse {
@@ -11,7 +11,6 @@ message StockResponse {
     bool inStock = 2;
 }
 
-message StockRequest {
-    int32 availableQuantity = 1;
-    bool inStock = 2;
+service InventoryService {
+    rpc CheckStock (StockRequest) returns (StockResponse);
 }

@@ -31,7 +31,11 @@
       "options": {
         "targetName": "test"
       },
-      "exclude": ["inventory-service-e2e/**/*", "order-service-e2e/**/*"]
+      "exclude": [
+        "inventory-service-e2e/**/*",
+        "order-service-e2e/**/*",
+        "order-service-e2e/**/*"
+      ]
     }
   ]
 }
