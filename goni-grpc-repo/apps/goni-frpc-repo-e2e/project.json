@@ -1,0 +1,17 @@
+{
+  "name": "goni-frpc-repo-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "implicitDependencies": ["goni-frpc-repo"],
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{e2eProjectRoot}"],
+      "options": {
+        "jestConfig": "apps/goni-frpc-repo-e2e/jest.config.cts",
+        "passWithNoTests": true
+      },
+      "dependsOn": ["goni-frpc-repo:build", "goni-frpc-repo:serve"]
+    }
+  }
+}
